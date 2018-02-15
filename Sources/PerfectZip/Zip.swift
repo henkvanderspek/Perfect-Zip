@@ -189,12 +189,13 @@ public class Zip {
 		}
 
 		// check the specified directories or files exist
-		for path in paths {
-			let thisCheckFile = Dir(path)
-			guard thisCheckFile.exists == true else {
-				return ZipStatus.FileNotFound
-			}
-		}
+        // TOOD: Fix this check for file urls
+//        for path in paths {
+//            let thisCheckFile = Dir(path)
+//            guard thisCheckFile.exists == true else {
+//                return ZipStatus.FileNotFound
+//            }
+//        }
 
 		var processedPaths = [ProcessedFilePath]()
 		for path in paths {
